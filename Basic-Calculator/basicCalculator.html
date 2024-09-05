@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>basic calculator</title>
+  <link rel="stylesheet" href="basicCalculator.css" />
+  
+</head>
+<body class="body">
+  <header>
+    <nav>
+
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <div>
+        <span>
+          <h1 class="first-heading">This is a Basic Calculator</h1>
+        </span>
+      </div>
+
+      <div class="calculator">
+        <h2>make some basic operations (Addition, Subtract, Multiply, Division, Modulus)</h2>
+
+        <!--Request Number from users-->
+        <input type="number" id="num1" placeholder="Enter First Number">
+        <input type="number" id="num2" placeholder="Enter Second Number">
+        <br/>
+
+        <button onclick="calculate('add')">Add</button>
+        <button onclick="calculate('subtract')">Subtract</button>
+        <button onclick="calculate('multiply')">Multiply</button>
+        <button onclick="calculate('divide')">Divide</button>
+        <button onclick="calculate('modulus')">Modulus</button>
+        <div class="result" id="result"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+
+  </footer>
+
+  <script src="basicCalculator.js"></script>
+</body>
+</html>

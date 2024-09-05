@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Web</title>
+  <link rel="stylesheet" href="05-Cart-Order.css"/>
+
+</head>
+<body>
+  <header></header>
+
+  <main>
+    <section>
+      <div>
+        <h2>Cart Order</h2> 
+      </div>
+      <div>
+        <button onclick="
+          console.log(`cart Quantity: ${cartQuantity}`);
+          
+        ">Show Quantity</button>
+        
+        <button onclick="
+        cartQuantity = cartQuantity + 1;
+        console.log(`Cart Quantity: ${cartQuantity}`);
+
+        ">Add to Cart</button>
+        
+        <button onclick="
+        cartQuantity + 2;
+        console.log(`Cart Quantity: ${cartQuantity}`);
+
+        ">+2</button>
+        
+        <button onclick="
+        cartQuantity + 3;
+        console.log(`Cart Quantity: ${cartQuantity}`);
+
+        ">+3</button>
+        
+        <button onclick="
+        cartQuantity = 0;
+        console.log(`Cart was Reset.`);
+        console.log (`Cart Quantity: ${cartQuantity}`);
+        ">Reset Cart</button>
+      </div>
+    </section>
+  </main>
+
+
+  <script src="05-Cart-Order.js"></script>
+</body>
+</html>

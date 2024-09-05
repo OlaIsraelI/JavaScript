@@ -122,3 +122,5 @@
 // const width = 5;
 // const rectanglePerimeter = findPerimeter(length, width);
 // console.log(`The Perimeter of the rectangle is: ${rectanglePerimeter}`);
+
+console.log("loading...")

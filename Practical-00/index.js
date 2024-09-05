@@ -195,11 +195,11 @@
 // console.log(addTwoNum(10, 5));
 
 
-function findPerimeter(length, width) {
-    // Correct formula for perimeter: 2 * (length + width)
-    let perimeter = 2 * (length + width);
-    return perimeter; // Return the calculated perimeter
-}
+// function findPerimeter(length, width) {
+//     // Correct formula for perimeter: 2 * (length + width)
+//     let perimeter = 2 * (length + width);
+//     return perimeter; // Return the calculated perimeter
+// }
 
 // // Example usage
 // const length = 10; // Define the length of the rectangle
@@ -260,3 +260,26 @@ function findPerimeter(length, width) {
 
 //A student learning JavaScript was trying to make a function. His code should concatenate a passed string name with string "Edabit" and store it in a variable called result. He needs your help to fix this code.
 
+// let x = 0;
+// let y = 1;
+// let z = null;
+
+// console.log(y && (!z));
+
+
+let user = {
+    Fname : "Ola",
+    degree : "MSc.",
+    age: 25,
+
+
+    getInfo(){
+        return `This is ${this.Fname} He is ${this.age} old, He is doing his ${this.degree} in University of California.`;
+    }
+};
+
+const userInfo = user.getInfo();
+
+const userInfoDiv = document.getElementById(`user-info`);
+
+userInfoDiv.textContent = userInfo;
