@@ -16,7 +16,7 @@ class ShoppingCartItem{
     this.quantity = quantity //Quantity of qunatities
   }
 
-  //3. Method to calculate the total price of the items
+  //2. ShoppingCartItem class to store product and it's quantity
 
   getTotalPrice(){
     return this.product.price * this.quantity;
