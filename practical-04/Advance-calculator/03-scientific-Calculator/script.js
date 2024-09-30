@@ -10,11 +10,22 @@ buttons.forEach((button) => {
     if (btnText === 'AC') {
       screen.value = '';
     } 
+        // Handling delete button ('DE')
+        else if (btnText === 'CE') {
+          display.value = display.value.toString().slice(0, -1); // Removes the last character
+        } 
+    // Handling factorial operation
+    else if (btnText === 'x!') {
+      screen.value = factorial(parseInt(screen.value)).toString();
+    } 
     // Handling equal button to evaluate the expression
     else if (btnText === '=') {
       try {
-        // Evaluate the expression using eval()
-        screen.value = eval(screen.value.replace('^', '**')); // replacing ^ with ** for exponentiation
+        // Replacing ^ with ** for exponentiation and evaluating the expression
+        let expression = screen.value.replace('^', '**')
+                                     .replace(/π/g, Math.PI)
+                                     .replace(/e/g, Math.E);
+        screen.value = eval(expression);
       } catch {
         screen.value = 'Error'; // Display error for invalid input
       }
@@ -33,9 +44,19 @@ buttons.forEach((button) => {
     else if (btnText === 'tan') {
       screen.value = Math.tan((parseFloat(screen.value) * Math.PI) / 180).toString();
     } 
+    // Prevent multiple consecutive operators
+    else if (/[\+\-\*\/]$/.test(screen.value) && /[\+\-\*\/]/.test(btnText)) {
+      return; // Ignore if the last character is already an operator
+    } 
     // Handling other buttons (numbers, operators, and exponent)
     else {
       screen.value += btnText;
     }
   });
 });
+
+// Function to calculate factorial
+function factorial(n) {
+  if (n < 0) return 'Error'; // Factorial of negative numbers is not defined
+  return n === 0 ? 1 : n * factorial(n - 1);
+}

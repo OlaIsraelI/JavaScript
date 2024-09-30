@@ -1,0 +1,6 @@
+Assignment 
+correct code to show the result for the code and 
+
+if (operators.include(e.target.value)){
+display.value += 
+}

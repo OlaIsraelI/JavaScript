@@ -16,6 +16,9 @@ const buttons = document.querySelectorAll('input[type="button"]');
 // Flag to track if a calculation has been completed
 let calculationDone = false;
 
+const operators = "+-/.*%";
+
+
 //Task Two
 
 // Adding Event Listeners:
@@ -55,7 +58,7 @@ const value = button.getAttribute('data-value');
       calculationDone = false; // Reset the calculation done flag
     } 
     // Handling delete button ('DE')
-    else if (action === 'delete') {
+    else if (action === 'd') {
       display.value = display.value.toString().slice(0, -1); // Removes the last character
     } 
     // Handling equal button ('=')
@@ -69,6 +72,10 @@ const value = button.getAttribute('data-value');
     } 
     // Handling all other buttons (numbers, operators)
     else if (value) {
+      if (operators.includes(e.target.value)){
+        display.value += e.target.value;
+        return (calculationDone = false)
+      }
     //Clear the display if a new number or operator is entered after a calculation
             if (calculationDone) {
               display.value = ''; // Clear the display

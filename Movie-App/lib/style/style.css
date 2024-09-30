@@ -1,0 +1,38 @@
+
+.swiper-container{
+  padding: 0;
+  height: 600px;
+}
+
+.swiper-container img{
+  height: 100%;
+  width: 100%;
+}
+
+.overlay{
+  height: 600px;
+  margin-bottom: -600px;
+  z-index: 2 !important;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.desc {
+  width: 60%;
+  text-align: center;
+}
+
+.desc h1{
+  color: #ffc107;
+}
+
+.desc p{
+  color: #fefefe;
+}
+
+/* .desc a{
+  color: #ffc107;
+} */
