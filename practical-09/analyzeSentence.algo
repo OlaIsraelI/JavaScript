@@ -1,0 +1,34 @@
+ALGORITHM analyzeSentence(sentence) 
+// Step 1: Initialize counters
+    Declare length = 0
+    Declare wordCount = 0
+    Declare vowelCount = 0
+    Declare vowels = "aeiouAEIOU"
+BEGIN
+  // Step 2: Iterate through each character in the sentence
+    For i = 0 to sentence.length - 1 do
+        Let char = sentence[i]
+        
+        // Step 3: Check if the character is not a period
+        If char ≠ '.' then
+            Increment length by 1  // Increment the length counter
+            
+            // Step 4: Check if the character is a vowel
+            If char is in vowels then
+                Increment vowelCount by 1  // Increment the vowel counter
+                
+            // Step 5: Check for word boundaries
+            If char = ' ' and sentence[i + 1] ≠ ' ' and sentence[i + 1] ≠ '.' then
+                Increment wordCount by 1  // Found the end of a word
+                
+    // Step 6: Account for the first word
+    If sentence.length > 1 and sentence[0] ≠ ' ' then
+        Increment wordCount by 1  // The first word is counted
+        // Step 7: Output the results
+    Output "Length of the sentence (excluding period): " + length
+    Output "Number of words: " + wordCount
+    Output "Number of vowels: " + vowelCount
+END
+
+
+
